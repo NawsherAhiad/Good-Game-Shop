@@ -1,0 +1,11 @@
+{% extends 'tapp/base.html' %}
+
+{% block content %}
+<div class="row mt-5">
+        <div class="col-md-6 offset-md-1">
+          <p><b>Username: </b>{{user.username}}</p>
+          <b>My Points: </b> {{user.profile.point}}
+        </div>
+     
+      </div>
+{% endblock %}

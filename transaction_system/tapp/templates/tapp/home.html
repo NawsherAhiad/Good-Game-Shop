@@ -1,0 +1,40 @@
+{% extends 'tapp/base.html' %}
+
+{% block content %}
+<div class="row mt-5">
+  <div class="col-md-6 offset-md-1">
+    <p style="font-size: 30px;">The fastest & easiest way to buy game credits</p>
+    <form method="POST" class="py-2 px-3" style="border: 0.5px solid rgb(207, 207, 207); border-radius: 10px">
+      {% csrf_token %}
+      <div class="my-2">
+        <label class="form-label"><b>Points</b></label>
+        <input type="text" name="getPoints" class="form-control" id="buyPointsInput" value="0" onchange="changeHandler"/>
+        <div id="buyPointsInput" class="form-text">Input how many coins you want to buy</div>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label"><b>Cost</b></label>
+        <input type="number" disabled class="form-control" id="calCost" value="0" />
+      </div>
+      <button type="submit" class="btn btn-success mb-2" style="padding: 5px; width: 80px">Buy</button>
+    </form>
+  </div>
+  <div class="col-md-4">
+    <p style="font-size: 30px;">Price List:</p>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-light"><span class="text-muted">1 to 9 points | Charge: 7 bdt/point
+      </li>
+      <li class="list-group-item list-group-item-light"><span class="text-muted">10 to 49 points | Charge: 6 bdt/point
+      </li>
+      <li class="list-group-item list-group-item-light"><span class="text-muted">50 to 99 points | Charge: 5 bdt/point
+      </li>
+      <li class="list-group-item list-group-item-light"><span class="text-muted">100 to 499 points | Charge: 4 bdt/point
+      </li>
+      <li class="list-group-item list-group-item-light"><span class="text-muted">500 or more points | Charge: 3
+          bdt/point</li>
+    </ul>
+  </div>
+</div>
+
+
+
+{% endblock %}
