@@ -133,7 +133,7 @@ begin
 end;
 /
 
-execute p1('Ahiad',52);
+execute p1('ahiad101',52);
  
  
 
