@@ -6,7 +6,7 @@ create table game_user(
 
 );
 
-insert into game_user(username) values('sakib101');
+insert into game_user(username) values('ahiad101');
 
 create table seller
 (
